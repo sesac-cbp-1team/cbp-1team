@@ -1,11 +1,11 @@
 import React from 'react';
 
-const ZetaConsul = () => {
+const Qna = () => {
   return (
     <div>
-
+      
     </div>
   );
 };
 
-export default ZetaConsul;
+export default Qna;

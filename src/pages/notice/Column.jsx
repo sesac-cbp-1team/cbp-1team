@@ -1,11 +1,11 @@
 import React from 'react';
 
-const ZetaConsul = () => {
+const Column = () => {
   return (
     <div>
-
+      
     </div>
   );
 };
 
-export default ZetaConsul;
+export default Column;
