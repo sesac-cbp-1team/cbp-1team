@@ -1,58 +1,103 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
+@import '../GlobalStyle.scss';
 
-.login-container {
+.loginContainer {
   display: flex;
+  width: 1266px;
+  height: 798px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid $basic-gray1;
+  box-shadow: 7px 7px 5px $basic-gray2;
 
-  .left-container {
+  .logLeftContainer {
     width: 383px;
     height: 798px;
     background: url('../../img/bg/sitemap_bg@2x.png') no-repeat;
     font-size: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-    .text {
-      color: #fff;
+    .logText {
+      color: $basic-white;
       font-family: 'Noto Sans KR', sans-serif;
       font-weight: 900;
-      &:nth-of-type(1) {
-        font-size: 34px;
-      }
-      &:nth-of-type(2) {
-        font-size: 33px;
+      font-size: 3.4rem;
+      margin: 51px 74px 0 31px;
+      
+      .logTextFirst {
+        font-size: 3.4rem;
       }
 
+      .logTextSecond {
+        font-size: 3.3rem;
+      }
+    }
+
+    .loginLogo {
+      width: 211px;
+      height: 57px;
+      margin-bottom: 45.81px;
+      margin-left: 33px;
+      display: block;
+      background: url('../../img/zetaplan_splite.png') no-repeat 1.667% 2.141%;
+      background-size: 599px 280px;
     }
   }
 
-  .right-container {
+  .logRightContainer {
     width: 883px;
     height: 798px;
 
-    .login-form {
+    .loginForm {
       display: flex;
       flex-direction: column;
-      border: none;
+      justify-content: center;
+      align-items: center;
+      width: 400px;
+      height: 650px;
+      margin: 0 auto;
 
-      .id-input {
+      .logIdInput {
         outline: none;
-        border-bottom: 1px solid #707070;
-
+        width: 400px;
+        height: 45px;
+        font-size: 1.6rem;
+        background-color: $basic-white;
+        border: none;
+        border-bottom: 1px solid $basic-gray2;
+        margin-bottom: 26px;
+        &::placeholder {
+          font-size: 1.6rem;
+        }
       }
       
-      .pwd-input {
+      .logPwdInput {
         outline: none;
+        width: 400px;
+        height: 45px;
+        font-size: 1.6rem;
+        border: none;
+        border-bottom: 1px solid $basic-gray2;
 
-
+        &::placeholder {
+          font-size: 1.6rem;
+        }
       }
 
+      .loginBtn {
+        width: 199px;
+        height: 47px;
+        background-color: #1527A0;
+        color: #fff;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 1.6rem;
+        font-weight: bold;
+        margin-top: 30px;
+      }
     }
-    
-    .login-btn {
-      background-color: #1527A0;
-      color: #fff;
-      font-family: 'Noto Sans KR', sans-serif;
-    }
-    
-    
   }
-
 }
