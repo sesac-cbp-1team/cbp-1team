@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto:wght@700&display=swap');
+// @import url('../GlobalStyle.scss');
+@import '../GlobalStyle.scss';
+
+$zt-bigTitle: 4.8rem;
+$zt-midTitle: 2.8rem;
+$zt-gtayColor:#707070;
+$zt-redColor:#94151C;
+$zt-ftNormal:400;
+$zt-ftMd:500;
+$zt-ftBold:700;
+$zt-ftExtra:900;
+
+@mixin ztMontserrat($mftSize){
+    font-family: 'Montserrat';
+    font-weight: $zt-ftBold;
+    font-size: $mftSize;
+}
+
+@mixin ztActive(){
+  content: "";
+  display: inline-block;
+  background: #94151C;
+  width: 9.4rem;
+  height: 0.2rem;
+  vertical-align: middle;
+  margin-right: 3.7rem;
+}
+
+@mixin ztNotoKr($zt-krWeight,$zt-krSize){
+  font-family: 'NotoSansKR';
+  font-weight:$zt-krWeight;
+  font-size:$zt-krSize;
+}
+
+.ztTitle{
+    @include Subtitle($sub-title, $basic-gray3);
+    color:$basic-white;
+}
+
+.ztInfoBox{
+  @include ztNotoKr($zt-ftMd,$list-md);
+}
+
+.ztIntro{
+    background-color: $basic-black;
+    font-weight: $zt-ftBold;
+    .ztTitle{
+        &:after{
+            display: none;
+        }
+    }
+    .ztInfoText{
+        text-align: center;
+        margin-top: 9.5rem;
+        line-height:2;
+        .ztTextTitle{
+            font-size: $zt-bigTitle;
+            color:$basic-white;
+        }
+        .ztTextWh{
+            font-size: $list-md;
+            color:$basic-white;
+            margin: 7.5rem 0;
+        }
+        .ztTextGr{
+            font-size: $list-md;
+            color:$zt-gtayColor;
+        }
+    }
+}
+
+.ztMessage{
+  padding-top: 38.2rem;
+  background-color: $basic-black;
+  color:$basic-white;
+  line-height:1.4;
+  .ztMessageInner{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /* width: 1170px; */
+    max-width: 112rem;
+    .ztMessageBox{
+      position: relative;
+      margin-top: 12rem;
+      .ztCircle{
+        width:34rem;
+        position: absolute;
+        left: -20rem;
+        top: -17rem;
+      }
+      .ztCeoTexts{
+        font-family: 'NotoSansKR';
+        font-weight:$zt-ftMd;
+        width:63.5rem;
+        position: absolute;
+        z-index: 1;
+        h2{
+            @include ztMontserrat($zt-bigTitle);
+        }
+        .ztCeoText{
+            font-size: $list-md;
+            margin:6rem 0 3.4rem 0;
+            line-height: 1.7;
+        }
+        .ztCeoName{
+            font-size: $size-lg;
+            font-weight: $zt-ftBold;
+        }
+      }
+    }
+   .ztCeoImg{
+      img{
+          width:53.9rem;
+      }
+    }
+  }  
+}
+
+.ztAwardsBox{
+    .ztAwardsBoxInner{
+      display: flex;
+      justify-content: space-between;
+        .ztAwardsTab{
+          font-weight:$zt-ftBold;
+          &.hover{
+            color:rgb(136, 0, 255);
+          }
+          .ztCertificate{
+            color: $zt-gtayColor;
+            font-size: $zt-midTitle;
+            margin-bottom: 6.3rem;
+            margin-left: 13.1rem;
+            cursor: pointer;
+            &.active{
+              color:$zt-redColor;
+              margin-left: 0rem;
+            }
+            &.active::before{
+              @include ztActive;
+            }
+            &.hover{
+              color:rgb(136, 0, 255);
+            }
+          }
+          .ztAward{
+            color: $zt-gtayColor;
+            font-size:$zt-midTitle;
+            margin-left: 13.1rem;
+            cursor: pointer;
+            &.active{
+              color:$zt-redColor;
+              margin-left: 0rem;
+            }
+            &.active::before{
+              @include ztActive;
+            }
+          }
+        }
+        .ztAwardsTitle{
+            .ztAwardsTitleTop{
+              @include ztMontserrat(6rem);
+            }
+            .ztAwardsTitleText{
+              font-weight:$zt-ftBold;
+              font-size:$zt-midTitle;
+              color:$zt-gtayColor;
+            }
+        }
+        .ztCertiContent{
+          display: flex;
+          flex-wrap: wrap;
+          flex-basis: 77rem;
+          .ztAwardList{
+            flex: 50%;
+            padding-left: 3rem;
+            margin-bottom: 5.5rem;
+            .ztYear{
+              font-size: $sub-title;
+              font-weight:$zt-ftBold;
+              &::after{
+                content: '';
+                display: block;
+                background: $zt-redColor;
+                width: 9.5rem;
+                height: 0.3rem;
+              }
+            }
+            .ztAwardTitle{
+              font-size: $size-sm;
+              font-weight:$zt-ftBold;
+              margin: 4rem 0 2rem;
+            }
+            .ztAwardContent{
+              font-size:$size-xs;
+              font-weight:$zt-ftMd;
+              line-height: 3.5rem;
+            }
+          }
+        }
+    }
+}

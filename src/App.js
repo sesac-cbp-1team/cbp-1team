@@ -7,6 +7,8 @@ import IrPerfo from './pages/ir/IrPerfo';
 import IrPlan from './pages/ir/IrPlan';
 import IrProcess from './pages/ir/IrProcess';
 import Ir from './pages/ir/index';
+import Footer from './components/common/Footer/index';
+import Zeta from './pages/zeta/index';
 
 function App() {
   return (
@@ -19,8 +21,10 @@ function App() {
           <Route path="/irPerfo" element={<IrPerfo />} />
           <Route path="/irPlan" element={<IrPlan />} />
           <Route path="/irProcess" element={<IrProcess />} />
+          <Route path="/zeta" element={<Zeta />} />
         </Routes>
       </BrowserRouter>
+      <Footer />
     </div>
   );
 }
