@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto:wght@700&display=swap');
+
+@import '../GlobalStyle.scss';
+@import '../mng/mngConsulting.scss';
+
+
+.mngFourCircle{
+  @include mngCircle($mngSize, $mngCircleSize);
+}
+
+.thinGradient{
+  width:130rem;
+  
+}
