@@ -9,6 +9,8 @@ import IrProcess from './pages/ir/IrProcess';
 import Ir from './pages/ir/index';
 import Footer from './components/common/Footer/index';
 import Zeta from './pages/zeta/index';
+import ZetaCi from './pages/zeta/ZetaCi';
+import ZetaNetwork from './pages/zeta/ZetaNetwork';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
           <Route path="/irPlan" element={<IrPlan />} />
           <Route path="/irProcess" element={<IrProcess />} />
           <Route path="/zeta" element={<Zeta />} />
+          <Route path="/zetaci" element={<ZetaCi />} />
+          <Route path="/zetanetwork" element={<ZetaNetwork />} />
         </Routes>
       </BrowserRouter>
       <Footer />

@@ -245,4 +245,81 @@
   left: 0;
   top: 8rem;
   height: 20rem;
-}/*# sourceMappingURL=index.css.map */
+}
+
+.ztNetWorkBox .ztNtInner {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 8rem 0;
+  /*margin:8rem auto 를 위로 수정해야할듯*/
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
+}
+
+.ztNetWorkBox .ztTitle {
+  font-size: 3.2rem;
+  font-weight: 900;
+  padding-left: 3rem;
+  position: relative;
+  color: #000;
+}
+.ztNetWorkBox .ztTitle::before {
+  content: "";
+  display: block;
+  background: url("./../../img/title_box@2x.png") no-repeat;
+  background-size: contain;
+  width: 1rem;
+  height: 4rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ztNetWorkBox .ztTitle::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #333;
+  position: absolute;
+  top: 6rem;
+  left: 0;
+}
+.ztNetWorkBox .ztTitle::after {
+  display: none;
+}
+
+.ztNetWorkBox .ztRedTabBox .ztRedTabInner {
+  width: 100%;
+  margin: 0;
+  padding: 12.3rem 0;
+}
+
+.ztNetWorkBox .ztRedTabTwo {
+  margin-bottom: 6.3rem;
+}
+
+.ztNetWorkBox .ztRedTabThr {
+  color: #707070;
+  font-size: 2.24rem;
+  margin-left: 10rem;
+  cursor: pointer;
+}
+.ztNetWorkBox .ztRedTabThr.active {
+  color: #94151C;
+  margin-left: 0rem;
+}
+.ztNetWorkBox .ztRedTabThr.active::before {
+  content: "";
+  display: inline-block;
+  background: #94151C;
+  width: 8rem;
+  height: 0.25rem;
+  vertical-align: middle;
+  margin-right: 2rem;
+}
+.ztNetWorkBox .ztRedTabThr:hover {
+  color: #94151C;
+}
+
+.ztNetWorkBox .ztNetWorkImgBig:hover {
+  opacity: 0.7;
+}/*# sourceMappingURL=zetaNetwork.css.map */

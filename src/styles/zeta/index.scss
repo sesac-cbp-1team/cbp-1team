@@ -2,9 +2,9 @@
 // @import url('../GlobalStyle.scss');
 @import '../GlobalStyle.scss';
 
-$zt-bigTitle: 4.8rem;
-$zt-midTitle: 2.8rem;
-$zt-gtayColor:#707070;
+$zt-bigTitle: 3.84rem;
+$zt-midTitle: 2.24rem;
+$zt-grayColor:#707070;
 $zt-redColor:#94151C;
 $zt-ftNormal:400;
 $zt-ftMd:500;
@@ -21,14 +21,14 @@ $zt-ftExtra:900;
   content: "";
   display: inline-block;
   background: #94151C;
-  width: 9.4rem;
-  height: 0.2rem;
+  width: 8rem;
+  height: 0.25rem;
   vertical-align: middle;
-  margin-right: 3.7rem;
+  margin-right: 2rem;
 }
 
 @mixin ztNotoKr($zt-krWeight,$zt-krSize){
-  font-family: 'NotoSansKR';
+  font-family: 'Noto Sans KR';
   font-weight:$zt-krWeight;
   font-size:$zt-krSize;
 }
@@ -36,10 +36,17 @@ $zt-ftExtra:900;
 .ztTitle{
     @include Subtitle($sub-title, $basic-gray3);
     color:$basic-white;
+    &::after{
+      display: none;
+    }
 }
 
 .ztInfoBox{
   @include ztNotoKr($zt-ftMd,$list-md);
+  font-family:'Roboto','Noto Sans KR',sans-serif;
+  .ztInner{
+    @include Inner;
+  }
 }
 
 .ztIntro{
@@ -65,7 +72,7 @@ $zt-ftExtra:900;
         }
         .ztTextGr{
             font-size: $list-md;
-            color:$zt-gtayColor;
+            color:$zt-grayColor;
         }
     }
 }
@@ -79,16 +86,15 @@ $zt-ftExtra:900;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    /* width: 1170px; */
     max-width: 112rem;
     .ztMessageBox{
       position: relative;
       margin-top: 12rem;
       .ztCircle{
-        width:34rem;
+        width:30rem;
         position: absolute;
-        left: -20rem;
-        top: -17rem;
+        left: -18rem;
+        top: -15rem;
       }
       .ztCeoTexts{
         font-family: 'NotoSansKR';
@@ -112,26 +118,29 @@ $zt-ftExtra:900;
     }
    .ztCeoImg{
       img{
-          width:53.9rem;
+          width:50rem;
+          &:hover {
+            opacity: 0.6;
+            transition: all 1.2s;
+          }
       }
     }
   }  
 }
 
-.ztAwardsBox{
-    .ztAwardsBoxInner{
+.ztRedTabBox{
+    .ztRedTabInner{
+      @include Inner;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
-        .ztAwardsTab{
+        .ztRedTab{
           font-weight:$zt-ftBold;
-          &.hover{
-            color:rgb(136, 0, 255);
-          }
-          .ztCertificate{
-            color: $zt-gtayColor;
+          .ztRedTabFirst{
+            color: $zt-grayColor;
             font-size: $zt-midTitle;
             margin-bottom: 6.3rem;
-            margin-left: 13.1rem;
+            margin-left: 10rem;
             cursor: pointer;
             &.active{
               color:$zt-redColor;
@@ -140,14 +149,14 @@ $zt-ftExtra:900;
             &.active::before{
               @include ztActive;
             }
-            &.hover{
-              color:rgb(136, 0, 255);
+            &:hover{
+              color:$zt-redColor;
             }
           }
-          .ztAward{
-            color: $zt-gtayColor;
+          .ztRedTabTwo{
+            color: $zt-grayColor;
             font-size:$zt-midTitle;
-            margin-left: 13.1rem;
+            margin-left: 10rem;
             cursor: pointer;
             &.active{
               color:$zt-redColor;
@@ -155,44 +164,65 @@ $zt-ftExtra:900;
             }
             &.active::before{
               @include ztActive;
+            }
+            &:hover{
+              color:$zt-redColor;
             }
           }
         }
-        .ztAwardsTitle{
-            .ztAwardsTitleTop{
-              @include ztMontserrat(6rem);
+        .ztRedTabTitle{
+            .ztRedTabTitleTop{
+              @include ztMontserrat(4.8rem);
+              position: relative;
+              &::before{
+                content: '';
+                display: block;
+                background: $zt-redColor;
+                width:0.8rem;
+                height: 0.8rem;
+                border-radius: 50%;
+                position: absolute;
+                left: 1.5rem;
+                top: -0.7rem;
+              }
             }
-            .ztAwardsTitleText{
+            .ztRedTabTitleTxt{
               font-weight:$zt-ftBold;
               font-size:$zt-midTitle;
-              color:$zt-gtayColor;
+              color:$zt-grayColor;
+              margin-top: 2rem;
             }
         }
-        .ztCertiContent{
+
+        .ztRedTabContent{
           display: flex;
           flex-wrap: wrap;
-          flex-basis: 77rem;
-          .ztAwardList{
+          flex-basis: 70rem;
+          .ztRedTabList{
             flex: 50%;
             padding-left: 3rem;
-            margin-bottom: 5.5rem;
-            .ztYear{
+            margin-bottom: 6rem;
+            .ztRedTabListTitle{
               font-size: $sub-title;
               font-weight:$zt-ftBold;
+              position: relative;
               &::after{
                 content: '';
                 display: block;
                 background: $zt-redColor;
-                width: 9.5rem;
-                height: 0.3rem;
+                width: 7.4rem;
+                height: 0.4rem;
+                position: absolute;
+                bottom: 1px;
+                z-index: -1;
               }
             }
-            .ztAwardTitle{
+            .ztRedTabContentTitle{
               font-size: $size-sm;
               font-weight:$zt-ftBold;
               margin: 4rem 0 2rem;
             }
-            .ztAwardContent{
+            .ztRedTabContentTxt{
               font-size:$size-xs;
               font-weight:$zt-ftMd;
               line-height: 3.5rem;
@@ -200,4 +230,11 @@ $zt-ftExtra:900;
           }
         }
     }
+}
+
+.ztFixed {
+    position: sticky; 
+    left: 0;
+    top:8rem; 
+    height: 20rem;
 }

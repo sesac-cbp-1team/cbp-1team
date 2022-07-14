@@ -1,12 +1,15 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto:wght@700&display=swap");
 .inner {
-  width: 1600px;
-  margin: 8rem auto;
+  width: 1440px;
+  margin: 0 auto;
+  padding: 8rem 0;
+  /*margin:8rem auto 를 위로 수정해야할듯*/
 }
 
 .irSubtitle {
-  font-size: 4rem;
+  font-size: 3.2rem;
   font-weight: 900;
   padding-left: 3rem;
   position: relative;
@@ -45,7 +48,7 @@
   margin-bottom: 10rem;
 }
 .irContent .irSubTitle {
-  font-size: 4rem;
+  font-size: 3.2rem;
   font-weight: 900;
   padding-left: 3rem;
   position: relative;
@@ -63,16 +66,16 @@
   left: 0;
 }
 .irContent .irSubTxt {
-  font-size: 2.4rem;
+  font-size: 1.92rem;
   line-height: 1.7;
 }
 .irContent .irListTitle {
-  font-size: 2.6rem;
+  font-size: 2.08rem;
   font-weight: bold;
   margin-bottom: 2rem;
 }
 .irContent .irListDetail {
-  font-size: 2.4rem;
+  font-size: 1.92rem;
   line-height: 1.7;
 }
 .irContent .irListContent .irList {
@@ -82,7 +85,7 @@
   padding: 2.2rem;
 }
 .irContent .irListContent .irList li {
-  font-size: 2.4rem;
+  font-size: 1.92rem;
   line-height: 1.5;
 }
 .irContent .irListContent .irList:first-child {
@@ -109,10 +112,10 @@
 }
 
 .irListDes {
-  font-size: 2.4rem;
+  font-size: 1.92rem;
   line-height: 1.7;
 }
 .irListDes li {
-  font-size: 2.4rem;
+  font-size: 1.92rem;
   line-height: 1.7;
 }/*# sourceMappingURL=index.css.map */

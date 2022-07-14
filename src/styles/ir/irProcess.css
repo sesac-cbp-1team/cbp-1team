@@ -1,12 +1,15 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto:wght@700&display=swap");
 .inner {
-  width: 1600px;
-  margin: 8rem auto;
+  width: 1440px;
+  margin: 0 auto;
+  padding: 8rem 0;
+  /*margin:8rem auto 를 위로 수정해야할듯*/
 }
 
 .irSubtitle {
-  font-size: 4rem;
+  font-size: 3.2rem;
   font-weight: 900;
   padding-left: 3rem;
   position: relative;
@@ -82,7 +85,7 @@
 }
 
 .irContentT {
-  font-size: 2.6rem;
+  font-size: 2.08rem;
   font-weight: bold;
   margin-bottom: 5rem;
 }
@@ -140,7 +143,7 @@
   margin-right: 9rem;
 }
 .irProCircleContent .irProCircleDes li {
-  font-size: 2rem;
+  font-size: 1.6rem;
   width: 22rem;
   text-align: center;
 }
@@ -218,19 +221,19 @@
 }
 .irProCircleAreaS .irProCircleSDetail li {
   color: #333;
-  font-size: 2rem;
+  font-size: 1.6rem;
   width: 22rem;
   text-align: center;
 }
 
 .irProText {
-  font-size: 2rem;
+  font-size: 1.6rem;
   line-height: 1.7;
   margin: 2rem 0 4rem;
 }
 
 .content h2 {
-  font-size: 3rem;
+  font-size: 2.4rem;
   font-weight: bold;
 }
 
