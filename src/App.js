@@ -8,15 +8,18 @@ import IrPerfo from './pages/ir/IrPerfo';
 import IrPlan from './pages/ir/IrPlan';
 import IrProcess from './pages/ir/IrProcess';
 import Ir from './pages/ir/index';
+import Header from './components/common/Header/index';
 import Gbindex from './pages/global/index';
 import GbStrategy from './pages/global/GbStrategy';
 import GbCase from './pages/global/GbCase';
+import Landing from './pages/landing/index';
 
 function App() {
   return (
     <div className="App">
       <ResetStyle />
       <BrowserRouter>
+        <Header />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/login" element={<Login />} />
@@ -27,6 +30,7 @@ function App() {
           <Route path="/Gbindex" element={<Gbindex />} />
           <Route path="/GbStrategy" element={<GbStrategy />} />
           <Route path="/GbCase" element={<GbCase />} />
+          <Route path="/landing" element={<Landing />} />
         </Routes>
       </BrowserRouter>
     </div>
