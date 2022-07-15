@@ -25,11 +25,15 @@
   }
 }
 
-.mngSummary{
-  margin-bottom: 14rem;
+.mngSubTitleNb.mngTradePro{
+  margin-top: 10rem;
 }
 
 .mngTradeProcessImg{
   width: 90rem;
   margin: 5.2rem 25rem;
+}
+
+.mngInner{
+  @include Inner
 }

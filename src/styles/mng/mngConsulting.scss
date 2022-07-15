@@ -8,7 +8,6 @@ $mngCircleSize : 20rem;
 $mngSummaySize : 132.7rem;
 $mngSummaryHeight : 26.6rem;
 
-
 .mngSubTitle{
   @include Subtitle($sub-title, $basic-gray3);
   margin: 7.8rem;
@@ -37,7 +36,6 @@ $mngSummaryHeight : 26.6rem;
   width: 132.7rem;
   height: 26.6rem;
   margin-left: 8.3rem;
-  margin-bottom: 5rem;
   p{
     font-size: $size-xl;
     line-height: 1.7;
@@ -55,10 +53,10 @@ $mngSummaryHeight : 26.6rem;
   width: $mngSize;
   justify-content: center;
   align-items: center;
-  margin: 9.5rem 27rem;
+  margin: 9.5rem 14rem;
   li {
-    width: $mngCircleSize;
-    height: $mngCircleSize;
+    width: 35rem;
+    height: 35rem;
     border-radius: 50%;
     border: 1px solid $main-color;
     margin-right: 4rem;
@@ -145,6 +143,7 @@ $mngSummaryHeight : 26.6rem;
 
 .mngFiveCircle{
   @include mngFiveCircle($mngSize,$mngCircleSize);
+  position: relative;
 }
 
 .mngCircleTxt{
@@ -160,10 +159,22 @@ $mngSummaryHeight : 26.6rem;
   }
 }
 
+.mngConsultingTxt{
+  position: absolute;
+  top:193rem;
+  left: 14rem;
+  p {
+    font-size: $size-sm; 
+    padding-left: 3rem;
+    line-height: 1.5;
+  }
+}
+
 .mngSmTitle{
+  width: 30rem;
   font-size: $size-xl;
-  margin-top: 4.6rem;
   margin-left: 7.6rem;
+  margin-top: 4rem;
 }
 
 .mngFiveTxt{
@@ -179,6 +190,9 @@ $mngSummaryHeight : 26.6rem;
   }
 }
 
+.mngSubTitleNb.mngConsultingPro{
+  margin-top: 20rem;
+}
 
 .mngInner{
   @include Inner

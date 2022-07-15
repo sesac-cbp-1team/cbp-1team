@@ -3,7 +3,7 @@
 @import '../GlobalStyle.scss';
 
 .mngSmTitle{
-  font-size: $sub-title;
+  font-size: 2.8rem;
   margin-left: 8.3rem;
 }
 
@@ -13,8 +13,8 @@
   margin-top: 3rem;
   margin-bottom: 5rem;
   p{
-    font-size: $size-xl;
-    line-height: 1.7;
+    font-size: $size-lg;
+    line-height: 1.5;
   }
 }
 
@@ -28,12 +28,17 @@
   width: 130rem;
   margin-top: 7.4rem;
   margin-left: 6.8rem;
+  position: relative;
 }
 
 .mngGrow{
+  width: 120rem;
   display: flex;
   justify-content: space-around;
-  transform: translateY(-6rem);
+  align-items: center;
+  position: absolute;
+  top: 154rem;
+  left: 12rem;
   span{
     color: #fff;
     font-size: $size-xl;
@@ -44,9 +49,12 @@
   display:flex;
   justify-content: space-around;
   width: 130rem;
+  height: 70rem;
   border: 1px solid #000;
   padding: 4.8rem 0 7rem;
-  transform: translate(6.8rem, -2.7rem);
+  position: absolute;
+  left: 6.8rem;
+  top: 159.8rem;
   li{
     line-height: 1.5;
   }
@@ -54,8 +62,8 @@
 .mngGrowTxt li:first-child{
   font-size:$size-xl; 
   font-weight: bold;
-  margin-bottom: 3rem;
-  margin-top: 3rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .mngGrowTxt li{
@@ -70,4 +78,8 @@
 }
 .mngGrowL{
   margin-left: 12rem;
+}
+
+.mngInner{
+  @include Inner;
 }

@@ -17,7 +17,7 @@ const MngTrade = () => {
         <p>기술투자, 기술 M&A 등 기술거래 관련 다양한 컨설팅 업무를 수행하고 있습니다.</p>
       </div>
       <div>
-        <h2 className='mngSubTitleNb'>Process</h2>
+        <h2 className='mngSubTitleNb mngTradePro'>Process</h2>
         <img src={ProcessImg} alt='process' className='mngTradeProcessImg'/>
       </div>
     </div>

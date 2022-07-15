@@ -69,30 +69,14 @@ const MngConsulting = () => {
         <li>STEP 04<br />대상시장<br />리더그룹 포지셔닝</li>
         <li>STEP 05<br />해외진출/사업확장</li>
       </ul>
-      <div className='mngFiveTxt'>
-        <p>원가추정, 추정 재무제표,  현금흐름・순익추정,<br /> 
-           자금유치시기 분석, 창업자금 조달
-        </p>
-        <p>
-        자금 운영계획, 회계사・회계시스템 활용,<br />
-        자금대출/상환계획
-        </p>
-        <p>
-        초기시장진입 - 재무제표 관리,<br />
-        수입금 관리 계획, 전문가에 의한<br /> 
-        자금 흐름/지출 분석
-        </p>
-        <p>
-        자본증자 계획, 전략적 투자유치,<br />
-        투자유치IR활동, 자금차입계획
-        </p>
-        <p>
-        국외투자유치 추진,  전략적 투자유치,<br /> 
-        정부 정책자금, 벤처캐피털・사모펀드 투자유치
-        </p>
+      <div className='mngConsultingTxt'>
+        <p>사업모델정립 단계에서는 원가추정, 추정 재무제표,  현금흐름・순익추정, 자금유치시기 분석, 창업자금 조달 등이 진행되며
+        제품/서비스 완성 단계에서는자금 운영계획, 회계사・회계시스템 활용,<br /> 자금대출/상환계획이 이루어지고 초기시장진입단계에서는 재무제표 관리, 수입금 관리 계획, 전문가에 의한 자금 흐름/지출 분석을 진행한다.<br />
+        대상시장/ 리더그룹 포지셔닝 단계에서는 자본증자 계획, 전략적 투자유치, 투자유치IR활동, 자금차입계획이 이루어지며
+        해외진출/ 사업확장 단계에서는 국외투자유치 추진, 전략적 투자유치,<br />정부 정책자금, 벤처캐피털・사모펀드 투자유치가 진행된다.</p>
       </div>
       <div>
-        <h2 className='mngSubTitleNb'>Process</h2>
+        <h2 className='mngSubTitleNb mngConsultingPro'>Process</h2>
       </div>
       <img src={ProcessGraph} alt='graph' className='mngConsultingProcessImg'/>
     </div>

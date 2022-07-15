@@ -48,71 +48,73 @@ const MngCertify = () => {
       </div>
       <h3 className='mngSmTitle'>기업인증을 통한 성장</h3>
       <img src={BoldGradient} alt="두꺼운 그라데이션" className='Boldgradient'/>
-      <div className='mngGrow'>
-        <span>창업초기</span>
-        <span>성장기</span>
-        <span>성숙기</span>
-      </div>
-      <div className='mngGrowTxt'>
-        <div className='mngGrowF'>
-          <ul>
-            <li>기업부설연구소</li>
-            <li>- 세액공제(개발비 25%)</li>
-            <li>- R&D 연구과제 참여 필수요소</li>
-            <li>- 전문연구원 지정 필수요소</li>
-            <li>- 이노비즈 필수요소, 자금지원</li>
-          </ul>
-          <ul>
-            <li>ISO9001/14001</li>
-            <li>- 이노비즈・메인비즈 필수요소</li>
-            <li>- KS심사 시 일부 면제</li>
-            <li>- NEP 현장심사 시 품질경영</li>
-            <li>- 시스템 평가 면제</li>
-          </ul>
+      <div className='mngGrowEdge'>
+        <div className='mngGrow'>
+          <span>창업초기</span>
+          <span>성장기</span>
+          <span>성숙기</span>
         </div>
-        <div className='mngGrowM'>
-          <ul>
-            <li>병역특례지정</li>
-            <li>- 고급인력을 저임금으로 채용</li>
-            <li>- 전문연구인력 36개월 배정으로</li>
-            <li>안정적인 인력확보</li>
-            <li>- 기업 신뢰도 상승 및 홍보효과</li>
-          </ul>
-          <ul>
-            <li>메인비즈인증</li>
-            <li>- 신보보증시 보증료율 0.1% 차감</li>
-            <li>- 방송광고비 감면</li>
-            <li>- 조달입촬 가점요소</li>
-            <li>- 정책자금 지원 가점 요소</li>
-          </ul>
-          <ul>
-            <li>이노비즈인증</li>
-            <li>- 기보・신보 보증지원(최대 50억)</li>
-            <li>- 방송광고비 감면</li>
-            <li>- 정책자금 지원 가점요소</li>
-            <li>- 특허우선출원, 상장심사 우대</li>
-          </ul>
-        </div>
-        <div className='mngGrowL'>
-          <ul>
-            <li>환경표지인증</li>
-            <li>- 조달 입찰시 가점</li>
-            <li>- 정부포상 제도에 추천</li>
-            <li>- 공공기관의 의무구매</li>
-          </ul>
-          <ul>
-            <li>월드클래스300</li>
-            <li>- 기술/인력 확보 우대지원</li>
-            <li>- 수출확대/금융 우대지원</li>
-            <li>- 컨설팅 우대지원 및 가점</li>
-            <li>- 기업성장을 위한 최고의 지원</li>
-          </ul>
-          <ul>
-            <li>녹색인증</li>
-            <li>- 녹색산업 융자지원</li>
-            <li>- 정부발주공사 우대</li>
-            <li>- 공공구매, 국방 조달심사우대</li>
-          </ul>
+        <div className='mngGrowTxt'>
+          <div className='mngGrowF'>
+            <ul>
+              <li>기업부설연구소</li>
+              <li>- 세액공제(개발비 25%)</li>
+              <li>- R&D 연구과제 참여 필수요소</li>
+              <li>- 전문연구원 지정 필수요소</li>
+              <li>- 이노비즈 필수요소, 자금지원</li>
+            </ul>
+            <ul>
+              <li>ISO9001/14001</li>
+              <li>- 이노비즈・메인비즈 필수요소</li>
+              <li>- KS심사 시 일부 면제</li>
+              <li>- NEP 현장심사 시 품질경영</li>
+              <li>- 시스템 평가 면제</li>
+            </ul>
+          </div>
+          <div className='mngGrowM'>
+            <ul>
+              <li>병역특례지정</li>
+              <li>- 고급인력을 저임금으로 채용</li>
+              <li>- 전문연구인력 36개월 배정으로</li>
+              <li>안정적인 인력확보</li>
+              <li>- 기업 신뢰도 상승 및 홍보효과</li>
+            </ul>
+            <ul>
+              <li>메인비즈인증</li>
+              <li>- 신보보증시 보증료율 0.1% 차감</li>
+              <li>- 방송광고비 감면</li>
+              <li>- 조달입촬 가점요소</li>
+              <li>- 정책자금 지원 가점 요소</li>
+            </ul>
+            <ul>
+              <li>이노비즈인증</li>
+              <li>- 기보・신보 보증지원(최대 50억)</li>
+              <li>- 방송광고비 감면</li>
+              <li>- 정책자금 지원 가점요소</li>
+              <li>- 특허우선출원, 상장심사 우대</li>
+            </ul>
+          </div>
+          <div className='mngGrowL'>
+            <ul>
+              <li>환경표지인증</li>
+              <li>- 조달 입찰시 가점</li>
+              <li>- 정부포상 제도에 추천</li>
+              <li>- 공공기관의 의무구매</li>
+            </ul>
+            <ul>
+              <li>월드클래스300</li>
+              <li>- 기술/인력 확보 우대지원</li>
+              <li>- 수출확대/금융 우대지원</li>
+              <li>- 컨설팅 우대지원 및 가점</li>
+              <li>- 기업성장을 위한 최고의 지원</li>
+            </ul>
+            <ul>
+              <li>녹색인증</li>
+              <li>- 녹색산업 융자지원</li>
+              <li>- 정부발주공사 우대</li>
+              <li>- 공공구매, 국방 조달심사우대</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
