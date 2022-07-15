@@ -1,11 +1,11 @@
 import React from 'react';
 
-const MaipoInfo = () => {
+const MaIpoInfo = () => {
   return (
     <div>
 
-    </div>
+    </div >
   );
 };
 
-export default MaipoInfo;
+export default MaIpoInfo;
