@@ -91,18 +91,21 @@
   left: -4rem;
 }
 
-.mngNeedTxt p {
-  font-size: 2rem;
+.mngNeedTxt {
+  width: 132.7rem;
+  margin-left: 9rem;
   margin-top: 6rem;
-  margin-left: 8rem;
-  line-height: 0.5;
+}
+.mngNeedTxt p {
+  font-size: 2.08rem;
+  font-family: "Noto Sans KR";
+  line-height: 1.7;
 }
 
 .thinGradient {
   width: 130rem;
   margin-top: 7.4rem;
   margin-left: 6.8rem;
-  position: relative;
 }
 
 .mngValueGradientTitle {
@@ -110,9 +113,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
-  top: 78rem;
-  left: 12rem;
+  margin-left: 11rem;
+  margin-top: -4rem;
 }
 .mngValueGradientTitle span {
   color: #fff;
@@ -127,13 +129,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 113rem;
-  left: 19rem;
+  margin-left: -10rem;
 }
 .mngValueAssess p {
   padding-left: 8rem;
   font-size: 1.6rem;
+  font-family: "Noto Sans KR";
   line-height: 1.5;
   text-align: center;
 }
@@ -142,13 +143,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 155rem;
-  left: 23rem;
+  margin-left: -2rem;
 }
 .mngCompanyAssess p {
   padding-left: 8rem;
   font-size: 1.6rem;
+  font-family: "Noto Sans KR";
   line-height: 1.5;
   text-align: center;
 }
@@ -161,19 +161,25 @@
   display: none;
 }
 
+/*
+.mngSkillValue{
+  display: none;
+}*/
+.mngValueTxtBox {
+  display: flex;
+}
+
 .mngValueList {
   font-size: 3rem;
   font-weight: bold;
   line-height: 8.3;
-  margin-left: 8rem;
-  position: relative;
+  margin-left: 10rem;
 }
 
 .mngCompanyValue {
-  position: absolute;
-  bottom: -63rem;
-  left: 25rem;
   line-height: 2;
+  margin-left: 10rem;
+  margin-top: 4.5rem;
 }
 .mngCompanyValue div {
   font-size: 1.8rem;
@@ -181,6 +187,7 @@
 }
 .mngCompanyValue p {
   font-size: 1.6rem;
+  font-family: "Noto Sans KR";
 }
 .mngCompanyValue span {
   font-size: 1.8rem;
@@ -208,15 +215,8 @@
 }
 .mngValueProcess p {
   font-size: 1.8rem;
+  font-family: "Noto Sans KR";
   line-height: 3;
-}
-
-.mngInner {
-  width: 20rem;
-  height: 20rem;
-  width: 1440px;
-  padding: 8rem 0;
-  margin: 0 auto;
 }
 
 .mngCircleWrap {
@@ -254,7 +254,7 @@
   top: -1.875rem;
   left: 50%;
   background-color: #1527a0;
-  transform: translate(-16rem, -3rem);
+  transform: translate(-16rem, -6rem);
 }
 
 .mngCircleItemConnection {
@@ -263,7 +263,7 @@
   bottom: 0.625rem;
   right: 0;
   background-color: #1527a0;
-  transform: translate(8rem, -8rem);
+  transform: translate(10rem, -8rem);
 }
 
 .mngCircleItemSpace {
@@ -272,7 +272,7 @@
   bottom: 0.625rem;
   left: 0;
   background-color: #1527a0;
-  transform: translateY(6rem);
+  transform: translateY(9rem);
 }
 
 .mngCircleText {
@@ -305,14 +305,20 @@
   }
 }
 .mngCircleBg {
-  background: url("../../img/zetaplan_splite.png") no-repeat -15.0625rem -0.5rem;
-  width: 13.0625rem;
-  height: 2.875rem;
-  background-size: 37.4375rem 17.5rem;
+  background: url("../../img/main/zetaplanLogo.svg") no-repeat;
+  width: 100%;
+  height: 100%;
   position: absolute;
-  left: 32rem;
-  bottom: -15rem;
-  border: 1px solid #ccc;
+  bottom: -30rem;
+  left: 22rem;
+  border: 1rem solid #ccc;
+  background-size: 100% 100%;
   border-radius: 50%;
-  padding: 10rem;
+  box-shadow: 0 0.625rem 1.25rem rgba(18, 27, 116, 0.18);
+}
+
+.mngInner {
+  width: 1440px;
+  padding: 8rem 0;
+  margin: 0 auto;
 }/*# sourceMappingURL=mngValue.css.map */
