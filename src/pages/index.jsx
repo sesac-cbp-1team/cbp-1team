@@ -7,6 +7,7 @@ import Performance from './main/Performance';
 import ZetaIntroduction from './main/ZetaIntroduction';
 import NewsColumn from './main/NewsColumn';
 import { useEffect } from 'react';
+import InformationList from '../components/main/InformationList';
 
 const Index = ({ setHdSubStyle }) => {
   useEffect(() => {
@@ -20,6 +21,7 @@ const Index = ({ setHdSubStyle }) => {
       <Performance />
       <ZetaIntroduction />
       <NewsColumn />
+      <InformationList />
       <Partners />
       <GlobalNetwork />
     </div>
