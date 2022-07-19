@@ -35,25 +35,14 @@ import ConsultingPage from './components/common/Consulting/ConsultingPage';
 import ZetaHistory from './pages/zeta/ZetaHistory';
 import ZetaConsul from './pages/zeta/ZetaConsul';
 import ZetaMap from './pages/zeta/ZetaMap';
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 import MaIpoPro from './pages/maipo/MaIpoPro';
 import MaIpoPerfo from './pages/maipo/MaIpoPerfo';
 import ScrollToTop from './components/common/ScrollTop';
-<<<<<<< Updated upstream
-=======
-import TopBtn from './components/common/TopBtn';
-=======
-=======
->>>>>>> Stashed changes
-import { useState } from 'react'
-import MaIpoPro from './pages/maipo/MaIpoPro';
-import MaIpoPerfo from './pages/maipo/MaIpoPerfo';
 
-function App() {
-  const [hdSubStyle, setHdSubStyle] = useState(false);
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+import TopBtn from './components/common/TopBtn';
+
+import { useState } from 'react'
+
 
 function App() {
   /* const [hdSubStyle, setHdSubStyle] = useState(false);
@@ -72,23 +61,6 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/main" element={<Index />} />
           <Route path="/login" element={<Login />} />
-<<<<<<< Updated upstream
-=======
-<<<<<<< Updated upstream
-=======
-          <Route path="/ir" element={<Ir />} />
-          <Route path="/ir-perfo" element={<IrPerfo />} />
-          <Route path="/ir-plan" element={<IrPlan />} />
-          <Route path="/ir-process" element={<IrProcess />} />
-          <Route path="/mng-consulting" element={<MngConsulting />} />
-          <Route path="/mng-certify" element={<MngCertify />} />
-          <Route path="/mng-trade" element={<MngTrade />} />
-          <Route path="/mng-value" element={<MngValue />} />
-          <Route path="/mng-credit" element={<MngCredit />} />
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
           <Route path="/zeta" element={<Zeta />} />
           <Route path="/zeta-history" element={<ZetaHistory />} />
           <Route path="/zeta-ci" element={<ZetaCi />} />
@@ -100,23 +72,18 @@ function App() {
           <Route path="/maipo" element={<MaIpoInfo />} />
           <Route path="/maipo-process" element={<MaIpoPro />} />
           <Route path="/maipo-performance" element={<MaIpoPerfo />} />
->>>>>>> Stashed changes
           <Route path="/ir" element={<Ir />} />
-          <Route path="/ir-perfo" element={<IrPerfo />} />
           <Route path="/ir-plan" element={<IrPlan />} />
           <Route path="/ir-process" element={<IrProcess />} />
-          <Route path="/mng-consulting" element={<MngConsulting />} />
+          <Route path="/ir-perfo" element={<IrPerfo />} />
+          <Route path="/gb" element={<Gbindex />} />
+          <Route path="/gb-strategy" element={<GbStrategy />} />
+          <Route path="/gb-case" element={<GbCase />} />
+          <Route path="/mng" element={<MngConsulting />} />
+          <Route path="/mng-credit" element={<MngCredit />} />
           <Route path="/mng-certify" element={<MngCertify />} />
           <Route path="/mng-trade" element={<MngTrade />} />
           <Route path="/mng-value" element={<MngValue />} />
-          <Route path="/mng-credit" element={<MngCredit />} />
-          <Route path="/zeta" element={<Zeta />} />
-          <Route path="/zeta-ci" element={<ZetaCi />} />
-          <Route path="/zeta-network" element={<ZetaNetwork />} />
-          <Route path="/gb" element={<Gbindex />} />
-          <Route path="/gb-trategy" element={<GbStrategy />} />
-          <Route path="/gb-case" element={<GbCase />} />
-          <Route path="/landing" element={<Landing />} />
           <Route
             path="/maipo"
             element={
@@ -127,26 +94,17 @@ function App() {
               />
             }
           />
-          <Route path="/maipo-process" element={<MaIpoPro />} />
-          <Route path="/maipo-performance" element={<MaIpoPerfo />} />
-          <Route path="/zeta-history" element={<ZetaHistory />} />
-          <Route path="/zeta-ci" element={<ZetaCi />} />
-          <Route path="/zeta-consul" element={<ZetaConsul />} />
-          <Route path="/zeta-network" element={<ZetaNetwork />} />
-          <Route path="/zeta-map" element={<ZetaMap />} />
-          <Route path="/landing" element={<Landing />} />
-          <Route path="/maipo" element={<MaIpoInfo />} />
-          <Route path="/qna" element={<Qna />} />
-          <Route path="/dataInfo" element={<DataInfo />} />
-          <Route path="/zeta-people" element={<ZetaPeople />} />
-          <Route path="/consulting" element={<ConsultingPage />} />
           <Route path="/news" element={<News />} />
           <Route path="/news/:category/:id" element={<NewsDetailItem />} />
-          <Route path="/qna/:id" element={<QnaDetail />} />
+          <Route path="/dataInfo" element={<DataInfo />} />
           <Route path="/datainfo/:category/:id" element={<DetailInfoItem />} />
+          <Route path="/qna" element={<Qna />} />
+          <Route path="/qna/:id" element={<QnaDetail />} />
+          <Route path="/consulting" element={<ConsultingPage />} />
         </Routes>
       </BrowserRouter>
       <Consulting />
+      <TopBtn />
       <Footer />
     </div>
   );
