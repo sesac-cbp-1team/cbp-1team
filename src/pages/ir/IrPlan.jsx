@@ -2,9 +2,15 @@ import React from 'react';
 import './../../styles/ir/irPlan.scss'
 import SubBanner from '../../components/common/SubBanner/index';
 import subBg from '../../img/ir/ir_sub_bg@2x.png'
+import { useEffect } from 'react';
 
-const IrPlan = () => {
+const IrPlan = ({ setHdSubStyle }) => {
   const title = 'ZETA PLAN은 지속적인 투자유치 멘토링으로 <br /> 성공적인 투자을 지원합니다'
+
+  /* header 배경색 변경 */
+  useEffect(() => {
+    setHdSubStyle('hdMain hdSub')
+  }, [setHdSubStyle])
 
   return (
     <div>
@@ -12,15 +18,15 @@ const IrPlan = () => {
       <div className='inner'>
         <div className="irSubtitle">사업계획서</div>
         <ul className='irCircle'>
-          <li>핵심요약<br />(Executive Summary)</li>
-          <li>기업개요<br />(Corporate Overview)</li>
-          <li>제품/용역<br />(Product&Service)</li>
-          <li>재무계획<br />(Financial Planning)</li>
-          <li>인력/조직<br />(Organization)</li>
-          <li>마케팅능력<br />(Marketing)</li>
-          <li>위험/기회<br />(Risks & Opportunities)</li>
-          <li>실행일정<br />(Action Plan)</li>
-          <li>사업체제<br />(Business System)</li>
+          <li>핵심요약<br /><span>(Executive Summary)</span></li>
+          <li>기업개요<br /><span>(Corporate Overview)</span></li>
+          <li>제품/용역<br /><span>(Product&Service)</span></li>
+          <li>재무계획<br /><span>(Financial Planning)</span></li>
+          <li>인력/조직<br /><span>(Organization)</span></li>
+          <li>마케팅능력<br /><span>(Marketing)</span></li>
+          <li>위험/기회<br /><span>(Risks & Opportunities)</span></li>
+          <li>실행일정<br /><span>(Action Plan)</span></li>
+          <li>사업체제<br /><span>(Business System)</span></li>
         </ul>
         <div className="irBusinessContent">
           <ul>

@@ -38,28 +38,21 @@ import ZetaMap from './pages/zeta/ZetaMap';
 import MaIpoPro from './pages/maipo/MaIpoPro';
 import MaIpoPerfo from './pages/maipo/MaIpoPerfo';
 import ScrollToTop from './components/common/ScrollTop';
-
 import TopBtn from './components/common/TopBtn';
-
-import { useState } from 'react'
-
+import { useState } from 'react';
 
 function App() {
-  /* const [hdSubStyle, setHdSubStyle] = useState(false);
-  function addSubStyle (){
-    setHdSubStyle(true);
-  } */
+  const [hdSubStyle, setHdSubStyle] = useState('hdMain');
 
   return (
     <div className="App">
       <ResetStyle />
       <BrowserRouter>
         <ScrollToTop />
-        <Header />
-        {/* {  true ? <Header className="" /> :  <Header className="" />  } */}
+        <Header hdSubStyle={hdSubStyle} />
         <Routes>
           <Route path="/" element={<Landing />} />
-          <Route path="/main" element={<Index />} />
+          <Route path="/main" element={<Index setHdSubStyle={setHdSubStyle} />} />
           <Route path="/login" element={<Login />} />
           <Route path="/zeta" element={<Zeta />} />
           <Route path="/zeta-history" element={<ZetaHistory />} />
@@ -101,6 +94,38 @@ function App() {
           <Route path="/qna" element={<Qna />} />
           <Route path="/qna/:id" element={<QnaDetail />} />
           <Route path="/consulting" element={<ConsultingPage />} />
+          <Route path="/ir" element={<Ir setHdSubStyle={setHdSubStyle} />} />
+          <Route path="/ir-perfo" element={<IrPerfo setHdSubStyle={setHdSubStyle} />} />
+          <Route path="/ir-plan" element={<IrPlan setHdSubStyle={setHdSubStyle} />} />
+          <Route path="/ir-process" element={<IrProcess setHdSubStyle={setHdSubStyle} />} />
+          <Route path="/mng-consulting" element={<MngConsulting setHdSubStyle={setHdSubStyle} />} />
+          <Route path="/mng-certify" element={<MngCertify setHdSubStyle={setHdSubStyle} />} />
+          <Route path="/mng-trade" element={<MngTrade setHdSubStyle={setHdSubStyle} />} />
+          <Route path="/mng-value" element={<MngValue setHdSubStyle={setHdSubStyle} />} />
+          <Route path="/mng-credit" element={<MngCredit setHdSubStyle={setHdSubStyle} />} />
+          <Route path="/zeta" element={<Zeta setHdSubStyle={setHdSubStyle} />} />
+          <Route path="/gb" element={<Gbindex setHdSubStyle={setHdSubStyle} />} />
+          <Route path="/gb-strategy" element={<GbStrategy setHdSubStyle={setHdSubStyle} />} />
+          <Route path="/gb-case" element={<GbCase setHdSubStyle={setHdSubStyle} />} />
+          <Route path="/landing" element={<Landing />} />
+          <Route path="/maipo-info" element={<MaIpoInfo setHdSubStyle={setHdSubStyle} />} />
+          <Route path="/maipo-process" element={<MaIpoPro setHdSubStyle={setHdSubStyle} />} />
+          <Route path="/maipo-performance" element={<MaIpoPerfo setHdSubStyle={setHdSubStyle} />} />
+          <Route path="/zeta-history" element={<ZetaHistory setHdSubStyle={setHdSubStyle} />} />
+          <Route path="/zeta-ci" element={<ZetaCi setHdSubStyle={setHdSubStyle} />} />
+          <Route path="/zeta-consul" element={<ZetaConsul setHdSubStyle={setHdSubStyle} />} />
+          <Route path="/zeta-network" element={<ZetaNetwork setHdSubStyle={setHdSubStyle} />} />
+          <Route path="/zeta-map" element={<ZetaMap setHdSubStyle={setHdSubStyle} />} />
+          <Route path="/qna" element={<Qna setHdSubStyle={setHdSubStyle} />} />
+          <Route path="/dataInfo" element={<DataInfo setHdSubStyle={setHdSubStyle} />} />
+          <Route path="/dataInfo/:category" element={<DataInfo setHdSubStyle={setHdSubStyle} />} />
+          <Route path="/zeta-people" element={<ZetaPeople setHdSubStyle={setHdSubStyle} />} />
+          <Route path="/consulting" element={<ConsultingPage setHdSubStyle={setHdSubStyle} />} />
+          <Route path="/news/" element={<News setHdSubStyle={setHdSubStyle} />} />
+          <Route path="/news/:category" element={<News setHdSubStyle={setHdSubStyle} />} />
+          <Route path="/news/:category/:id" element={<NewsDetailItem setHdSubStyle={setHdSubStyle} />} />
+          <Route path="/qna/:id" element={<QnaDetail setHdSubStyle={setHdSubStyle} />} />
+          <Route path="/datainfo/:category/:id" element={<DetailInfoItem setHdSubStyle={setHdSubStyle} />} />
         </Routes>
       </BrowserRouter>
       <Consulting />

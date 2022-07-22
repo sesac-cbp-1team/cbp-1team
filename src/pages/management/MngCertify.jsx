@@ -1,13 +1,19 @@
 import React from 'react';
-import BoldGradient from '../../img/me/me_company_box@2x.png'; 
+import BoldGradient from '../../img/me/me_company_box@2x.png';
 import '../../styles/mng/mngCertify.scss';
 import SubBanner from '../../components/common/SubBanner/index';
 import subBg from '../../img/me/me_sub_bg@2x.png';
+import { useEffect } from 'react';
 
 
-
-const MngCertify = () => {
+const MngCertify = ({ setHdSubStyle }) => {
   const title = '인증기업의 성장을 위해<br />체계적인 업무를 지원합니다.'
+
+  /* header 배경색 변경 */
+  useEffect(() => {
+    setHdSubStyle('hdMain hdSub')
+  }, [setHdSubStyle])
+
   return (
     <div>
       <SubBanner title={title} img={subBg} />
@@ -52,6 +58,8 @@ const MngCertify = () => {
           <p>- 전분야 상담가능한 고급컨설턴트의 1:1 업체 전담 배정 및 지원</p>
         </div>
         <h3 className='mngSmTitle mngCertifyTitle'>기업인증을 통한 성장</h3>
+        <h3 className='mngSmTitle'>기업인증을 통한 성장</h3>
+        <img src={BoldGradient} alt="두꺼운 그라데이션" className='Boldgradient' />
         <div className='mngGrowEdge'>
           <div className='mngGrow'>
             <img src={BoldGradient} alt="두꺼운 그라데이션" className='Boldgradient'/>
@@ -124,7 +132,7 @@ const MngCertify = () => {
         </div>
       </div>
     </div>
-   
+
   );
 };
 

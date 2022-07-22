@@ -7,49 +7,65 @@
     padding-bottom: 20px;
     border-bottom: 1px solid $basic-gray3;
     p {
+      font-family: 'Noto Sans KR',sans-serif;
       font-size: $sub-title;
       font-weight: bold;
     }
   }
   .detailItemBox {
     border-bottom: 1px solid $basic-gray2;
+
     .detailItemTitle {
       padding: 35px;
       text-align: center;
+      font-family: 'Noto Sans KR',sans-serif;
       font-size: $size-xl;
       font-weight: 700;
       border-bottom: 1px solid $basic-gray2;
 
     }
+
     .contentBox {
-      width: 1000px;
+      width: 80%;
       margin: 60px auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
       img {
         width: auto;
         margin: 0 auto 30px;
-
       }
+
       .content {
 
-        p, li, div {
+        p, li, div, strong, h3, ul {
+          font-family: 'Noto Sans KR',sans-serif;
           font-size: $size-sm;
           font-weight: normal;
-          line-height: 1.5;
+          line-height: 1.7;
+        }
+        
+        img {
+          width: auto;
+          margin: 0 auto 30px;
         }
       }
 
     }
   }
+
   .newsListBtn {
     display: block;
     width: 120px;
     height: 40px;
     background-color: $main-color;
     color: $basic-white;
+    font-family: 'Noto Sans KR',sans-serif;
     font-size: $size-sm;
     padding: 10px 40px;
     margin: 70px auto 0;
     text-align: center;
+    line-height: 1.5;
   }
 }

@@ -8,8 +8,9 @@ import fundSupportData from '../../db/fund-supportList.json';
 import techData from '../../db/technologyList.json';
 import consultData from '../../db/consultingList.json';
 import InfoItem from '../../components/Notice/InfoItem';
+import { useNavigate } from 'react-router-dom';
 
-const DataInfo = () => {
+const DataInfo = ({ setHdSubStyle }) => {
   const title = 'ZETA PLAN만의 <br />다양하고 전문적인 정보를 제공해드립니다'
 
   const [filteredList, setFilteredList] = useState([]);
@@ -17,16 +18,20 @@ const DataInfo = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [dataList, setDataList] = useState([]);
 
-  useEffect(()=> {
+  const navigate = useNavigate();
+
+  useEffect(() => {
     setShowNum(6);
     setDataList(getSelectedData());
-    // console.log(dataList);
-    // console.log(filteredList);
   }, [selectedIndex])
 
-  useEffect(()=> {
+  useEffect(() => {
     setFilteredList(dataList.slice(0, showNum));
   }, [dataList])
+
+  useEffect(() => {
+    setHdSubStyle('hdMain hdSub')
+  }, [setHdSubStyle])
 
   const showMoreData = () => {
     const result = dataList.length - filteredList.length;
@@ -52,8 +57,6 @@ const DataInfo = () => {
     }
   }
 
-  // event.target === selectedIndex
-
   const getActiveClassName = (index) => {
     return index === selectedIndex ? 'active' : undefined;
   }
@@ -64,13 +67,28 @@ const DataInfo = () => {
       <div className='dataInfoInner'>
         <div className='infoTitleBox'>
           <h2 className='infoTitle'>자료</h2>
-          <div className='infoTabList'>
-            <li className={getActiveClassName(0)} onClick={() => setSelectedIndex(0)}>M&A・투자정보</li>
-            <li className={getActiveClassName(1)} onClick={() => setSelectedIndex(1)}>정부지원사업 참여 모집</li>
-            <li className={getActiveClassName(2)} onClick={() => setSelectedIndex(2)}>정책자금 / 기업지원정보</li>
-            <li className={getActiveClassName(3)} onClick={() => setSelectedIndex(3)}>기술거래리스트</li>
-            <li className={getActiveClassName(4)} onClick={() => setSelectedIndex(4)}>컨설팅 실적</li>
-          </div>
+          <ul className='infoTabList'>
+            <li className={getActiveClassName(0)} onClick={() => {
+              navigate('/datainfo/m&a-invest')
+              setSelectedIndex(0)
+            }}>M&A・투자정보</li>
+            <li className={getActiveClassName(1)} onClick={() => {
+              navigate('/datainfo/government-support')
+              setSelectedIndex(1)
+            }}>정부지원사업 참여 모집</li>
+            <li className={getActiveClassName(2)} onClick={() => {
+              navigate('/datainfo/fund-support')
+              setSelectedIndex(2)
+            }}>정책자금 / 기업지원정보</li>
+            <li className={getActiveClassName(3)} onClick={() => {
+              navigate('/datainfo/technology-trade')
+              setSelectedIndex(3)
+            }}>기술거래리스트</li>
+            <li className={getActiveClassName(4)} onClick={() => {
+              navigate('/datainfo/consulting-list')
+              setSelectedIndex(4)
+            }}>컨설팅 실적</li>
+          </ul>
         </div>
         <div className='infoSearchCon'>
           <span>총{dataList.length}개</span>

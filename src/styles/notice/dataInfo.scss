@@ -21,8 +21,10 @@
       
       li {
         margin-left: 50px; // 122px인데 임시 수정(문의)
+        font-family: 'Noto Sans KR',sans-serif;
         font-size: 2.24rem;
         position: relative;
+        cursor: pointer;
         
         &.active {
           color : $main-color
@@ -30,14 +32,14 @@
 
         &.active::after {
           content: "";
-          width: 140px;
+          width: 100%;
           height: 2px;
           display: block;
           background-color: $main-color;
           position: absolute;
           left: 50%;
           transform: translateX(-50%);
-          bottom: -16px;
+          bottom: -18px;
           opacity: 1;
         }
       }
@@ -52,17 +54,20 @@
     margin-top: 94px;
 
     span {
+      font-family: 'Noto Sans KR',sans-serif;
       font-size: 1.76rem;
     }
     
     .infoSearchBox {
       position: relative;
       width: 450px;
+      padding: 16px 0;
+      border-bottom: 1px solid #707070;
 
       .infoInput {
         width: 450px;
         border: none;
-        border-bottom: 1px solid #707070;
+        // border-bottom: 1px solid #707070;
         font-size: 2rem;
         display: block;
         outline: none;s
@@ -81,7 +86,7 @@
         height: 18px;
         position: absolute;
         right: 0;
-        top: 0;
+        bottom: 16px;
       }
     }
   }
@@ -92,10 +97,11 @@
     justify-content: space-between;
 
     .dataInfoItem {
-      width: 450px;
-      height: 316px;
+      width: calc(33.33% - 18px);
+      // height: 316px;
+      height: 30rem;
       margin-bottom: 50px;
-      padding: 56px 103px 56px 54px;
+      padding: 56px 54px;
       border: 1px solid $basic-black;
       border-radius: 20px;
       display: flex;
@@ -105,6 +111,10 @@
       &:hover {
         background-color: $main-color;
         color: $basic-white;
+      }
+
+      &:last-child {
+        align-self: flex-start;
       }
 
       .infoItemTop {
@@ -122,14 +132,15 @@
 
       }
       dt {
-        margin: 49px 0 28px;
-        width: 292px;
+        margin: 42px 0 28px;
+        // width: 292px;
         overflow: hidden;
         text-overflow: ellipsis;
         word-break: break-word;
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
+        font-family: 'Noto Sans KR',sans-serif;
         font-size: 2.32rem;
         font-weight: bold;
         line-height: 1.5;
@@ -143,16 +154,45 @@
   }
 
   .infoMoreBtn {
-    width: 295px;
-    height: 78px;
+    width: 29.5rem;
+    height: 7.8rem;
     border: 1px solid #707070;
     border-radius: 50px;
     outline: none;
     font-size: 1.6rem;
     display: block;
-    margin: 167px auto 0;
+    margin: 7rem auto 0;
+    font-family: 'Noto Sans KR',sans-serif;
     font-size: 1.6rem;
     font-weight: bold;
   }
+
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+
+  .dataInfoInner .dataInfoLiBox {
+
+    // justify-content: space-around;
+    justify-content: space-between;
+  }
+
+  .dataInfoInner .dataInfoLiBox .dataInfoItem {
+    width: calc(50% - 10px);
+
+    dt {
+      -webkit-line-clamp: 1;
+
+    }
+  }
+
+};
+
+@media (min-width: 360px) and (max-width: 767px){
+  .dataInfoInner .dataInfoLiBox .dataInfoItem {
+    width: calc(50% - 20px);
+    padding: 3rem 4rem;
+  }
+
 
 }

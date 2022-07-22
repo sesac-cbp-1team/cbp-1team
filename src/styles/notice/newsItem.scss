@@ -1,25 +1,28 @@
 @import '../GlobalStyle.scss';
 
 .newsItemContainer {
-  width: 440px;
+  width: calc(33.33% - 16px);
   margin: 113px 0;
 
   .thumbnail {
-    width: 440px;
+    width: 80%;
     height: auto;
     min-height: 370px;
     margin-bottom: 49px;
   }
   .newsTitle {
-    width: 300px;
+    width: 70%;
+    font-family: 'Noto Sans KR',sans-serif;
     font-size: $size-xl;
     font-weight: bold;
-    line-height: 1.5;
+    line-height: 1.7;
   }
   .newsContent {
-    width: 408px;
+    // width: 408px;
+    width: 80%;
+    font-family: 'Noto Sans KR',sans-serif;
     font-size: $list-md;
-    line-height: 1.5;
+    line-height: 1.7;
     margin: 25px 0 52px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -29,17 +32,16 @@
     -webkit-box-orient: vertical;
 
     h3, div, p, ul li {
+      font-family: 'Noto Sans KR',sans-serif;
       font-size: $list-md;
       font-weight: normal;
-      // white-space: nowrap;
-      // overflow: hidden;
-      // text-overflow: ellipsis;
       list-style: none;
 
     }
 
   }
   .createdAt {
+    font-family: 'Noto Sans KR',sans-serif;
     font-size: $size-sm;
   }
 }

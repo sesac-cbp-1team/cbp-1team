@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import SubBanner from '../../components/common/SubBanner';
 import subBg from '../../img/notice/notice_sub_bg@2x.png';
 import QnaTable from '../../components/Notice/QnaTable';
@@ -6,21 +6,21 @@ import '../../styles/qna/qna.scss'
 import qnaJsonList from '../../db/qna.json';
 import PaginatedItems from './Pagination';
 
+const Qna = ({ setHdSubStyle }) => {
 
-const Qna = () => {
-  
+  useEffect(() => {
+    setHdSubStyle('hdMain hdSub')
+  }, [setHdSubStyle])
+
   const itemsPerPage = 10;
 
   const [data, setData] = useState([]);
 
   const [currentItems, setCurrentItems] = useState(null);
   const [pageCount, setPageCount] = useState(0);
-  // Here we use item offsets; we could also use page offsets
-  // following the API or data you're working with.
   const [itemOffset, setItemOffset] = useState(0);
 
   useEffect(() => {
-    // Fetch items from another resources.
     const endOffset = itemOffset + itemsPerPage;
     setCurrentItems(data.slice(itemOffset, endOffset));
     setPageCount(Math.ceil(data.length / itemsPerPage));
@@ -31,32 +31,33 @@ const Qna = () => {
     setItemOffset(newOffset);
   };
 
-  useEffect(()=> {
+  useEffect(() => {
     const reverseData = [...qnaJsonList].reverse();
     setData(reverseData);
   }, [])
 
   const title = 'ZETA PLAN만의 <br />다양하고 전문적인 정보를 제공해드립니다'
-  
+
   if (currentItems === null) {
     return <div></div>;
   }
-  
-  console.log(currentItems);
+
   return (
     <div>
-      <SubBanner title={title} img={subBg}/>
+      <SubBanner title={title} img={subBg} />
       <div className='qnaInner'>
         <div className='qnaTitleBox'>
           <h2 className='qnaTitle'>Q&A</h2>
         </div>
         <div className='qnaSearchInput'>
-          <label htmlFor="qnaCategory"></label>
-          <select className='qnaSelect' name="qanCategory" id="qnaCategory">
-            <option value="all">전체</option>
-            <option value="writer">작성자</option>
-            <option value="createdAt">작성일</option>
-          </select>
+          <div className="qnaSelectBox">
+            <label htmlFor="qnaCategory">qnaCategory</label>
+            <select className='qnaSelect' name="qanCategory" id="qnaCategory">
+              <option value="all">전체</option>
+              <option value="writer">작성자</option>
+              <option value="createdAt">작성일</option>
+            </select>
+          </div>
           <div className='qnaSearchBox'>
             <input className="qnaSearch" type="text" placeholder="검색어를 입력하세요." />
             <span className='qnamagnifier'></span>

@@ -10,7 +10,7 @@ import techData from '../../db/technologyList.json';
 import consultData from '../../db/consultingList.json';
 import '../../styles/notice/detailInfoItem.scss';
 
-const DetailInfoItem = () => {
+const DetailInfoItem = ({ setHdSubStyle }) => {
   const { category, id } = useParams();
   const [data, setData] = useState([]);
 
@@ -32,18 +32,22 @@ const DetailInfoItem = () => {
     }
   }
 
-  useEffect(()=> {
+  useEffect(() => {
     setData(getDataByCategory());
   }, [category])
-  
-  useEffect(()=> {
+
+  useEffect(() => {
     const filteredData = data.find((element) => element.id === parseInt(id));
     setDetailData(filteredData);
   }, [data])
 
+  useEffect(() => {
+    setHdSubStyle('hdMain hdSub')
+  }, [setHdSubStyle])
+
   const title = 'ZETA PLAN만의 <br />다양하고 전문적인 정보를 제공해드립니다';
 
-  if(!detailData) {
+  if (!detailData) {
     return <div></div>;
   }
 
@@ -57,7 +61,7 @@ const DetailInfoItem = () => {
         <div className='detailContentInner'>
           <p className='detailTitle'>{detailData.title}</p>
           <img src="../../img/notice/data_info/investImg_1.png" alt="" />
-          <div className="content" dangerouslySetInnerHTML={{__html: detailData.content}}>
+          <div className="content" dangerouslySetInnerHTML={{ __html: detailData.content }}>
           </div>
         </div>
         <Link to='/datainfo' className='infoListBtn'>목록</Link>

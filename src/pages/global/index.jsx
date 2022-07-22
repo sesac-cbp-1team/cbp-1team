@@ -4,15 +4,23 @@ import strategyGraph from '../../img/global/global_strategy_graph.png';
 import '../../styles/global/index.scss';
 import SubBanner from '../../components/common/SubBanner/index';
 import subBg from '../../img/global/global_sub_bg.png';
+import { useEffect } from 'react';
 
-const index = () => {
+const index = ({ setHdSubStyle }) => {
   const title = 'ZETA PLAN은 전 세계적으로<br/> 우수한 해외 네트워크를 보유하고 있습니다.';
+
+  /* header 배경색 변경 */
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect(() => {
+    setHdSubStyle('hdMain hdSub');
+  }, [setHdSubStyle]);
+
   return (
     <div>
       <SubBanner title={title} img={subBg} />
       <div className="gbInner">
         <div className="gbTabTitleBox">
-          <p className="gbTabTitle">전략수립</p>
+          <p className="gbTabTitle">개요</p>
         </div>
         <p className="gbContentSubTitle">프로그램 개요</p>
         <div className="gbMaterialBox">
@@ -23,13 +31,11 @@ const index = () => {
           <p className="gbMaterialTitle">✔︎ 서비스 내용</p>
           <p className="gbMaterialContent">
             • 15년의 노하우, 2천개 이상의 기업지원, 중진공, kotra, kiat 등 정부기관의 글로벌사업자로 선정된
-            <br />
-            &nbsp;&nbsp; (주)제타플랜인베스트가 해외시장의 전반적 상황에 대한 정보를 수집, 제공.
+            (주)제타플랜인베스트가 해외시장의 전반적 상황에 대한 정보를 수집, 제공.
           </p>
           <p className="gbMaterialContent">
-            • 각종 시장조사 기관의 발간정보, 해외 대리인, 오퍼상 등을 이용하여 실시하는 시장조사 활동이며
-            <br />
-            &nbsp;&nbsp;해외시장의 전반적 상황(경제 동향, 산업 동향, 시장 특성, 시장 규모 및 전망) 정보 제공
+            • 각종 시장조사 기관의 발간정보, 해외 대리인, 오퍼상 등을 이용하여 실시하는 시장조사 활동이며 해외시장의
+            전반적 상황(경제 동향, 산업 동향, 시장 특성, 시장 규모 및 전망) 정보 제공
           </p>
         </div>
         <div className="gbMaterialBox">
@@ -94,7 +100,7 @@ const index = () => {
               <p className="gbChartYear">2019</p>
               <p className="gbChartName">글로벌성과확산강화산업</p>
               <p className="gbChartCom">KIAT</p>
-              <p className="gbChartCon">바이어 발굴 및 매칭, 기술사업화 상담회 개최</p>
+              <p className="gbChartCon">바이어 발굴 및 매칭, 상담회 개최</p>
             </li>
             <li className="gbchartList">
               <p className="gbChartYear">2018</p>
@@ -112,7 +118,7 @@ const index = () => {
               <p className="gbChartYear">2018</p>
               <p className="gbChartName">중소환경기업 사업화기반구축사업</p>
               <p className="gbChartCom">한국환경산업기술원</p>
-              <p className="gbChartCon">해외진출 전략수립 컨설팅, 바이어 발굴 및 매칭</p>
+              <p className="gbChartCon">해외진출 전략수립 컨설팅, 바이어 매칭</p>
             </li>
             <li className="gbchartList">
               <p className="gbChartYear">2018</p>

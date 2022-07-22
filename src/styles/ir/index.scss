@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Noto+Sans+KR:wght@400;500;700;900&family=Roboto:wght@700&display=swap');
 @import '../GlobalStyle.scss';
 
-.inner {
+.irInner {
   @include Inner;
 }
 
@@ -14,16 +14,15 @@
   justify-content: center;
 }
 
-.irSubImg  img {
-  height: 90rem;
-  width: auto;
-  margin: 7rem 0 14rem;
+.irSubImg  {
+  height: 56vw;
+  margin: 6rem auto;
 }
 
 .irContent {
   margin-bottom: 10rem;
-  .irSubTitle {
-    font-size: $sub-title;
+  .irSubTitleSmall{
+    font-size: 2.8rem;
     font-weight: 900;
     padding-left: 3rem;
     position: relative;
@@ -72,14 +71,6 @@
         border-bottom: 2px solid black;
       }
     }
-    .irListProcessImg {
-      font-size: 100px;
-      background-color: red;
-      background: url(./../../img/ir/ir_summery@2x.png) no-repeat red;
-      background-size: cover;
-      height: 980px;
-      width: auto;
-    }
 
     
   }
@@ -88,11 +79,10 @@
 .irListProcessImg {
   display: flex;
   justify-content: center;
+  height: 56vw;
+
 }
-.irListProcessImg img{
-  width: auto;
-  height: 90rem;
-}
+
 .irListDes {
   font-size: $list-md;
   line-height: 1.7;
@@ -102,3 +92,19 @@
     line-height: 1.7;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1023px){
+
+
+}
+@media (min-width: 360px) and (max-width: 767px){
+  .irSubImg  {
+    height: 70vw;
+  }
+  .irListProcessImg   {
+    height: 83vw;
+  }
+}
+
+
+

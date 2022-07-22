@@ -12,19 +12,18 @@
     margin-left: 8rem;
     text-transform: uppercase;
     position: relative;
-    bottom: 8rem;
+    bottom: 7rem;
 
     .ziTitleBlue {
       font: {
-        size: 5.5rem;
-        weight: bold;
+        size: $main-title;
         family: Montserrat;
       }
       color: #1527a0;
     }
     .ziTitleBlack {
       font: {
-        size: 5rem;
+        size: $main-title;
         weight: bold;
         family: Montserrat;
       }
@@ -33,24 +32,26 @@
 
   .ziContentBox {
     display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    position: relative;
+    bottom: 4rem;
 
     .ziCompanyDes {
-      font-size: 2rem;
+      word-break: keep-all;
+      font-size: 1.9rem;
       color: $basic-white;
-      width: 85rem;
       text-align: left;
-      margin-left: 8rem;
-      position: relative;
-      bottom: 6rem;
       line-height: 1.5;
     }
 
     .ziLinkBox {
+      margin-left: 10%;
       display: flex;
       color: $basic-white;
-      margin-left: 30rem;
       position: relative;
-      bottom: 6rem;
+      flex-wrap: nowrap;
 
       .ziCompanyLink a {
         display: block;
@@ -65,7 +66,7 @@
 
         &:after {
           content: '';
-          background: url(./../../img/zetaplan_splite.png) no-repeat -512px -234px;
+          background: url(./../../img/icon/thin_arrow.png) no-repeat;
           width: 57px;
           height: 15px;
           position: absolute;
@@ -86,12 +87,166 @@
 
         &:after {
           content: '';
-          background: url(./../../img/zetaplan_splite.png) no-repeat -512px -234px;
+          background: url(./../../img/icon/thin_arrow.png) no-repeat;
           width: 57px;
           height: 15px;
           position: absolute;
           top: 2rem;
           left: 17rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 745px) and (max-width: 1100px) {
+  .ziWrap .ziContentBox {
+    flex-direction: column;
+
+    .ziCompanyDes {
+      width: 600px;
+      margin: auto;
+    }
+
+    .ziLinkBox {
+      margin: 30px auto 0;
+
+      .ziCompanyLink a {
+        display: block;
+        border: 1px solid $basic-white;
+        width: 26.8rem;
+        height: 6.3rem;
+        display: flex;
+        align-items: center;
+        padding-left: 5rem;
+        margin-right: 6rem;
+        font-size: 1.8rem;
+
+        &:after {
+          content: '';
+          background: url(./../../img/icon/thin_arrow.png) no-repeat;
+          width: 57px;
+          height: 15px;
+          position: absolute;
+          top: 2.5rem;
+          left: 53rem;
+        }
+      }
+
+      .ziEstablishmentLink a {
+        display: block;
+        border: 1px solid $basic-white;
+        width: 26.8rem;
+        height: 6.3rem;
+        display: flex;
+        align-items: center;
+        padding-left: 5rem;
+        font-size: 1.8rem;
+
+        &:after {
+          content: '';
+          background: url(./../../img/icon/thin_arrow.png) no-repeat;
+          width: 57px;
+          height: 15px;
+          position: absolute;
+          top: 2.5rem;
+          left: 20rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 475px) and (max-width: 744px) {
+  .ziWrap .ziContentBox {
+    flex-direction: column;
+    margin: auto;
+
+    .ziCompanyDes {
+      width: 400px;
+      margin: auto;
+    }
+
+    .ziLinkBox {
+      margin: auto;
+      margin-top: 30px;
+    }
+  }
+}
+
+@media (min-width: 375px) and (max-width: 474px) {
+  .ziWrap {
+    .ziTitleCon {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 50rem;
+      margin-left: 8rem;
+      text-transform: uppercase;
+      position: relative;
+      bottom: 5rem;
+
+      .ziTitleBlue {
+        font: {
+          size: 3.5rem;
+          family: Montserrat;
+        }
+        color: #1527a0;
+      }
+      .ziTitleBlack {
+        font: {
+          size: 3.5rem;
+          weight: bold;
+          family: Montserrat;
+        }
+      }
+    }
+    .ziContentBox {
+      flex-direction: column;
+      margin: auto;
+
+      .ziCompanyDes {
+        width: 300px;
+        margin: 0 auto;
+      }
+
+      .ziLinkBox {
+        width: 300px;
+        display: flex;
+        color: $basic-white;
+        position: relative;
+        flex-wrap: nowrap;
+        margin: 15px auto 0;
+
+        .ziCompanyLink a {
+          display: block;
+          border: 1px solid $basic-white;
+          width: 20rem;
+          height: 6.3rem;
+          display: flex;
+          align-items: center;
+          padding-left: 6rem;
+          margin-right: 6rem;
+          font-size: 1.8rem;
+
+          &:after {
+            display: none;
+          }
+        }
+
+        .ziEstablishmentLink a {
+          display: block;
+          border: 1px solid $basic-white;
+          width: 20rem;
+          height: 6.3rem;
+          display: flex;
+          align-items: center;
+          padding-left: 6rem;
+          font-size: 1.8rem;
+
+          &:after {
+            display: none;
+          }
         }
       }
     }
