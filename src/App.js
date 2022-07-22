@@ -83,7 +83,7 @@ function App() {
           <Route path="/mng-credit" element={<MngCredit />} />
           <Route path="/mng-certify" element={<MngCertify />} />
           <Route path="/mng-trade" element={<MngTrade />} />
-          <Route path="/mng-value" element={<MngValue />} />
+          <Route path="/mng-value/:category" element={<MngValue />} />
           <Route
             path="/maipo"
             element={

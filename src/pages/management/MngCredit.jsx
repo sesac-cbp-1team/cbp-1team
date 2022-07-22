@@ -18,14 +18,18 @@ const MngCredit = () => {
     setSelected(i)
   }
 
+  const goToCredit = () => {
+    window.open('https://aff.g2brating.co.kr/index.html#MENUCM0300?param=zeta');
+  }
+
   const data= [
     {
       title: '기업신용평가서비스',
       content:
       (
         <div className="mngCreditTxt">
-          <p>기업 신용평가(Credit Assessment)란 신용거래에 따른 대손위험의 최소화와 합리적인 거래처의 결정을 위해</p>
-          <p>거래상대방에 대한 신용상태를 파악하여 신용거래기간 내 부식화할 가능성을 평가하고 등급으로 나타내는 과정입니다.</p>
+          <p>기업 신용평가(Credit Assessment)란 신용거래에 따른 대손위험의 최소화와 합리적인 거래처의 결정을 위해
+          거래상대방에 대한 신용상태를 파악하여 신용거래기간 내 부식화할 가능성을 평가하고 등급으로 나타내는 과정입니다.</p>
         </div>
       )
     },
@@ -36,8 +40,8 @@ const MngCredit = () => {
         <div>
           <img src={CreditImg} alt="credit" className='mngCreditImg'/>
           <div className='mngCreditTxt'>
-            <p>국가계약관련 회계예규 및 공공기관의 입찰적격심사세부기준의 변경으로 물품, 용역, 공사 입찰참여자의 경영상태의 평가방법이 기업신용평가로</p><p>변경되었습니다. 조달청을 시작으로 중소기업청, 공기업, 행정자치부 등 모든 공공기관으로 확대 되어가는 “공공입찰 기업신용평가”에 대비하시기</p>
-            <p>바랍니다.</p>
+            <p>국가계약관련 회계예규 및 공공기관의 입찰적격심사세부기준의 변경으로 물품, 용역, 공사 입찰참여자의 경영상태의 평가방법이 기업신용평가로 변경되었습니다. 조달청을 시작으로 중소기업청, 공기업, 행정자치부 등 모든 공공기관으로 확대 되어가는 “공공입찰 기업신용평가”에 대비하시기
+            바랍니다.</p>
           </div>
         </div>
       )
@@ -49,9 +53,9 @@ const MngCredit = () => {
         <div>
           <img src={CreditImg} alt="credit" className='mngCreditImg'/>
           <div className='mngCreditTxt'>
-            <p>시중은행 및 전국은행연합회는 현행 당좌 개설요건을 강화하여 일정수준의 신용도를 가진 기업에만 어음발행을 허용하는  개선안을 마련하였습니다.</p>
-            <p>(2009년 2월). 이러한 ‘어음제도 개선방안’의 일환으로 은행대신 외부의 공신력있는 조사, 평가기관이 당좌거래개설을 위한 기업신용평가를 수행하게</p><p>되었습니다. 나이스디앤비 등 신용평가기관을 통해 받으셔서 은행에 제출하신 당좌개설용 기업신용평가결과는 은행의   당좌개설심사에 반영되어 개설여부</p>
-            <p>및 어음교부매수가 결정됩니다.</p>
+            <p>시중은행 및 전국은행연합회는 현행 당좌 개설요건을 강화하여 일정수준의 신용도를 가진 기업에만 어음발행을 허용하는  개선안을 마련하였습니다.
+            (2009년 2월) 이러한 ‘어음제도 개선방안’의 일환으로 은행대신 외부의 공신력있는 조사, 평가기관이 당좌거래개설을 위한 기업신용평가를 수행하게 되었습니다. 나이스디앤비 등 신용평가기관을 통해 받으셔서 은행에 제출하신 당좌개설용 기업신용평가결과는 은행의   당좌개설심사에 반영되어 개설여부
+            및 어음교부매수가 결정됩니다.</p>
           </div>
         </div>
       )
@@ -85,8 +89,8 @@ const MngCredit = () => {
       (
         <div>
           <div className='mngCreditTxt'>
-            <p>전문적인 평가모형과 실사를 통하여 거래 기업의 상거래 신용능력을 등급으로 제공하고 평가연구원이 작성하여 보고서   형태로 발급하는 서비스입니다.</p>
-            <p>신용평가 결과 및 신용변동내역을 온라인 상에서 조회 및 출력할 수 있고 실시간 모니터링을 통해 상시적으로 거래기업의 신용능력을 관리할 수 있는 솔루션입니다.</p>
+            <p>전문적인 평가모형과 실사를 통하여 거래 기업의 상거래 신용능력을 등급으로 제공하고 평가연구원이 작성하여 보고서   형태로 발급하는 서비스입니다.
+            신용평가 결과 및 신용변동내역을 온라인 상에서 조회 및 출력할 수 있고 실시간 모니터링을 통해 상시적으로 거래기업의 신용능력을 관리할 수 있는 솔루션입니다.</p>
           </div>
           <img src={CooperationImg} alt="신용평가" className='mngCreditImg'/>
           <div className='mngCreditCombine'>
@@ -121,7 +125,7 @@ const MngCredit = () => {
           <div className='mngCreditWrapper'>
             <div className='mngAccordion'>
               {data.map((item, i)=> (
-                <div className='mngCreditItem' key={item.id}>
+                <div className='mngCreditItem' key={i}>
                   <div className={selected === i ? 'mngCreditBtn on' : 'mngCreditBtn'} onClick={()=>toggle(i)}>
                     <h2 className='mngCreditTitle'>{item.title}</h2>
                     <div>{selected === i ? <div className='mngTopBtn'></div> : <div className='mngUnderBtn'></div>}</div>
@@ -144,7 +148,7 @@ const MngCredit = () => {
             <div>심층분석 보고서</div>
             <p>정밀심사와 분석을 필요로 하는 기업에 제공하는 보고서</p> 
           </div>
-          <button className='mngCreditApply' onClick={()=>{window.location.href='https://aff.g2brating.co.kr/index.html#MENUCM0300?param=zeta'}}>신용평가 신청</button> 
+          <button className='mngCreditApply' onClick={goToCredit}>신용평가 신청</button> 
         </div>
       </div>
     </div>
