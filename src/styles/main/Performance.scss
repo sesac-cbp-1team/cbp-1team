@@ -177,11 +177,8 @@
       margin-bottom: 20px;
       margin-right: 0;
 
-      .pfMQImgBox {
-        display: block;
-        img {
-          width: 80vw;
-        }
+      .pfImgBox {
+        display: none;
       }
       .pfConBox {
         margin-top: 20px;
@@ -207,17 +204,20 @@
             padding-bottom: 15px;
           }
         }
+        .pfDes {
+          display: none;
+        }
       }
+    }
 
-      .ipoList,
-      .globalList {
-        margin-right: 20px;
-      }
+    .ipoList,
+    .globalList {
+      margin-right: 20px;
+    }
 
-      .maList,
-      .irList {
-        margin-left: 20px;
-      }
+    .maList,
+    .irList {
+      margin-left: 20px;
     }
   }
 }
