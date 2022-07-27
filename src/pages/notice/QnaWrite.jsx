@@ -5,18 +5,18 @@ import { useState, useRef } from 'react';
 import './../../styles/qna/qnaWrite.scss'
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-import { Link } from 'react-router-dom';
-
-
-
+import { Link ,useNavigate} from 'react-router-dom';
 
 const QnaWrite = () => {
+  const navigate= useNavigate();
   const ckContent = document.querySelector('.ck-content');
   const subTitle = 'ZETA PLAN만의 <br />다양하고 전문적인 정보를 제공해드립니다'
   const [state, setState] = useState({
     title: '',
     author: '',
     content: '',
+    id:'',
+    hit:'',
   })
 
   const handleChangeState = (e) => {
@@ -35,7 +35,7 @@ const QnaWrite = () => {
     setErrors(validation(state));
     if(state.title.length < 1 ) {
       titleInput.current.focus();
-      return ;
+      return;
     }
 
     if(state.author.length < 1 ) {
@@ -48,16 +48,14 @@ const QnaWrite = () => {
       return ;
     } 
     
+    
     const qnaList = JSON.parse(window.localStorage.getItem('newQnaList'));
-
-    if (qnaList) {
-      window.localStorage.setItem('newQnaList', JSON.stringify([...qnaList, { ...state, createdAt: new Date().toISOString().split('T')[0] }]));
-    } else {
-      window.localStorage.setItem('newQnaList', JSON.stringify([{ ...state, createdAt: new Date().toISOString().split('T')[0] }]));
-    }
+    const newQnaForm = {...state, id: qnaList.length + 1, createdAt: new Date().toISOString().split('T')[0], hit: Math.floor(Math.random() * qnaList.length) };
+    
+    window.localStorage.setItem('newQnaList', JSON.stringify([...qnaList, newQnaForm]));
 
     alert('질문 등록 완료되었습니다');
-    window.location='/qna'
+    navigate('/qna')
     
   }
 
@@ -80,10 +78,15 @@ const QnaWrite = () => {
 
   }
 
+  const oneDepth='소식 · 자료';
+  const oneDepthLink='/news';
+  const twoDepth='Q&A';
+  const twoDepthLink='/qna';
+  const linkActive='twoDepth';
 
   return (
     <div>
-      <SubBanner title={subTitle} img={subBg} />
+      <SubBanner title={subTitle} img={subBg} oneDepth={oneDepth} oneDepthLink={oneDepthLink} twoDepth={twoDepth} twoDepthLink={twoDepthLink} linkActive={linkActive} />
 
       <div className="qnaWriteInner">
         <div className="qnaWriteArea">

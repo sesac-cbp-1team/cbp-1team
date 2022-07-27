@@ -8,20 +8,22 @@ import PaginatedItems from './Pagination';
 import { Link } from 'react-router-dom';
 
 const Qna = ({ setHdSubStyle }) => {
+
   useEffect(() => {
     setHdSubStyle('hdMain hdSub')
   }, [setHdSubStyle])
-  
-  const itemsPerPage = 10;
+
   
   const [originData, setOriginData] = useState([]);
   const [data, setData] = useState([]);
-  
+
+  const itemsPerPage = 10;
   const [currentItems, setCurrentItems] = useState(null);
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
 
   const [input, setInput] = useState('');
+
 
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;
@@ -33,16 +35,15 @@ const Qna = ({ setHdSubStyle }) => {
     const newOffset = event.selected * itemsPerPage % data.length;
     setItemOffset(newOffset);
   };
-
+  
   useEffect(() => {
-    const qnaLocalStorage = JSON.parse(window.localStorage.getItem('newQnaList'));
-    const qnaList = qnaLocalStorage !== null 
-      ? qnaJsonList.concat(qnaLocalStorage).map((item, index) => {
-        return { ...item, id: index + 1, hit: 7 };
-      }) 
-      : [...qnaJsonList];
+    const qnaList = JSON.parse(window.localStorage.getItem('newQnaList'));
 
-    const reversedQnaList = qnaList.reverse();
+    if (qnaList === null) {
+      window.localStorage.setItem('newQnaList', JSON.stringify(qnaJsonList))
+    }
+  
+    const reversedQnaList = JSON.parse(window.localStorage.getItem('newQnaList')).reverse();
 
     setData(reversedQnaList);
     setOriginData(reversedQnaList);
