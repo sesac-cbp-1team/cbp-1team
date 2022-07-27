@@ -1,13 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate,useSearchParams} from 'react-router-dom';
 import SubBanner from '../../components/common/SubBanner';
 import subBg from '../../img/notice/notice_sub_bg@2x.png';
 import '../../styles/qna/qnaDetail.scss'
 
 const QnaDetail = ({ setHdSubStyle }) => {
-  const { id } = useParams();
+  let { id } = useParams();
+  id=parseInt(id);
+
+  const navigate = useNavigate();
 
   const [data, setData] = useState(null);
+  
+  const qnaLocalStorage = JSON.parse(window.localStorage.getItem('newQnaList'));
+  const qnaList = qnaDataList.concat(qnaLocalStorage).map((item, index) => {
+    return { ...item, id: index, hit: 77 };
+  })
+  console.log('test', qnaList)
 
   useEffect(() => {
     const qnaList = JSON.parse(window.localStorage.getItem('newQnaList'));
@@ -15,6 +24,7 @@ const QnaDetail = ({ setHdSubStyle }) => {
     setData(detailPageData);
   }, []);
 
+  
   useEffect(() => {
     setHdSubStyle('hdMain hdSub')
   }, [setHdSubStyle])
@@ -26,6 +36,18 @@ const QnaDetail = ({ setHdSubStyle }) => {
   if (!data) {
     return <div></div>;
   }
+
+  const onDelete = (id) => {
+    console.log(`${id}가 삭제되었습니다`);
+    const newQnaList = [...qnaList].splice(id, 1);
+    setData(newQnaList)
+    navigate(`/qna?detailId=${id}`);
+  }
+
+  const updateId = (id) => {
+    navigate('/qna');
+  }
+
 
   return (
     <div>
