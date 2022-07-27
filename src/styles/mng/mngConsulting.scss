@@ -232,6 +232,13 @@ $size-ft : 1.6rem;
     height: 50vw;
     font-size: 0;
   }
+  .mngConsultingProcessImg{
+    background: url(./../../img/me/me_process_graph@2x.png) no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 50vw;
+    font-size: 0;
+  }
   .mngTradeProcessImg{
     background: url(./../../img/me/me_process@2x.png) no-repeat;
     background-size: cover;
@@ -245,6 +252,7 @@ $size-ft : 1.6rem;
 
 .dark{
   @include Dark;
+
   .mngConsultingProcessImg{
     background: url(./../../img/me/me_process_graph_w.png) no-repeat;
     background-size: contain;
@@ -272,6 +280,7 @@ $size-ft : 1.6rem;
   &:hover{
     background-color: $main-color;
     }
+
   }
   .mngCompanyValueAssess li{
     background-color: #ccc;
@@ -287,6 +296,7 @@ $size-ft : 1.6rem;
   }
   .mngValueProcess span{
     color: $basic-white;
+
   }
   .mngCreditBtn{
     background-color: #ccc;
@@ -304,7 +314,7 @@ $size-ft : 1.6rem;
   .mngGrowTxt{
     border: .5px solid $basic-white;
   }
-  
+
 }
 
 
