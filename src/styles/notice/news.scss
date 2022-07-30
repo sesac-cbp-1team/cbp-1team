@@ -1,12 +1,12 @@
 @import '../GlobalStyle.scss';
 
-.dark {
-  @include Dark;
-  .newsTabTitle, .newsTitle .newsContentBox {
-    color: $basic-white; 
-  }
+// .dark {
+//   @include Dark;
+//   .newsTabTitle, .newsTitle .newsContentBox {
+//     color: $basic-white; 
+//   }
 
-}
+// }
 
 .newsInner {
   @include Inner;
@@ -92,7 +92,7 @@
           font-family: 'Noto Sans KR',sans-serif;
           font-size: 2.4rem;
           width: 95%;
-          height: 163px;
+          max-height: 155px;
           font-weight: normal;
           overflow: hidden;
           text-overflow: ellipsis;
