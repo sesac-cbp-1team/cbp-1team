@@ -9,6 +9,7 @@ $mngCircleSize : 20rem;
 
 .mngInner.mngValueInner{
   padding-top: 18rem;
+
 }
 
 .mngSubTitle{
@@ -603,12 +604,11 @@ $mngCircleSize : 20rem;
 
   .mngMenuTab li{
       font-size: 2rem;
-      margin-left: 0rem;
       width: 85px;
       height: 5px;
       top: -21px;
       margin-left: 0;
-  }
+
 
 
   .mngSmTitle.mngValueTitle{
@@ -732,7 +732,6 @@ $mngCircleSize : 20rem;
 
 
 @media all and (max-width:768px) {
-
 
 
   .mngValueCompanyProcess {

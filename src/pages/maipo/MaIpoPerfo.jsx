@@ -6,9 +6,10 @@ import MaPerfo from './tab/MaPerfo';
 import IpoPerfo from './tab/IpoPerfo';
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import PageBase from './../../components/common/Darkmode/PageBase';
 
 const MaIpoPerfo = ({ setHdSubStyle }) => {
-  const [active, setActive] = useState(0);
+  const [setActive] = useState(0);
   const navigate = useNavigate();
   const { category } = useParams();
   const [selectedIndex, setSelectedIndex]= useState(0); 
@@ -28,7 +29,6 @@ const MaIpoPerfo = ({ setHdSubStyle }) => {
   const threeDepthLink=`/maipo-performance/${category}`;
   const linkActive = 'threeDepth';
 
-  /* header 배경색 변경 */
   useEffect(() => {
     setHdSubStyle('hdMain hdSub')
   }, [setHdSubStyle])
@@ -80,15 +80,6 @@ const MaIpoPerfo = ({ setHdSubStyle }) => {
     return '';
   }
 
-  const [theme, setTheme] = useState('true');
-  const [themeCss, setThemCss] = useState('true');
-  const handleTheme = () => {
-    const value = theme;
-    setTheme(!value);
-    const cssValue = value ? 'dark' : 'light';
-    setThemCss(cssValue);
-  }
-
 
   const tabContentents = [
     {
@@ -107,39 +98,30 @@ const MaIpoPerfo = ({ setHdSubStyle }) => {
     <div className='miPerfo'>
 
       {data.tabSubTitle}
-
-      <div className={themeCss}>
-        <div className='darkBackground'>
-          <div className='miPerfoInner'>
-            <div className="themeBtnArea">
-              <button className='themeBtn' onClick={()=>{handleTheme()}}>
-                mode change
-              </button>
-            </div>
-            <div className='darkText miPerfoHead'>
+      <PageBase>
+        <div className='miPerfoInner'>
+          <div className='darkText miPerfoHead'>
               성과
-              <ul className='darkText miPerfoTab'>
-                <li key={0} className={getActiveClassName('m&a')} onClick={() => {
-                  tabClick(0)
-                  navigate('/maipo-performance/m&a')
-                  setSelectedIndex(0)
-                }} > M & A 
-                </li >
-                <li key={1} className={getActiveClassName('ipo')} onClick={() => {
-                  tabClick(1)
-                  navigate('/maipo-performance/ipo')
-                  setSelectedIndex(1)
-                }}> IPO 
-                </li>
-              </ul>
-            </div>
-
-            {data.tabContent}
-
+            <ul className='darkText miPerfoTab'>
+              <li key={0} className={getActiveClassName('m&a')} onClick={() => {
+                tabClick(0)
+                navigate('/maipo-performance/m&a')
+                setSelectedIndex(0)
+              }} > M & A 
+              </li >
+              <li key={1} className={getActiveClassName('ipo')} onClick={() => {
+                tabClick(1)
+                navigate('/maipo-performance/ipo')
+                setSelectedIndex(1)
+              }}> IPO 
+              </li>
+            </ul>
           </div>
-        </div >
-      </div>
 
+          {data.tabContent}
+
+        </div>
+      </PageBase>
     </div>
       
   );
